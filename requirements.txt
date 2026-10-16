@@ -1,0 +1,13 @@
+# 백엔드
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34
+sqlalchemy>=2.0.36,<2.1
+pydantic-settings>=2.6
+tzdata  # Windows에서 Asia/Seoul 시간대 사용에 필요
+
+# 데이터 엔지니어링
+pandas>=2.2
+
+# 테스트
+pytest>=8
+httpx>=0.28

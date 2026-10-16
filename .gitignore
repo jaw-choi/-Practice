@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 환경 변수 (비밀값은 절대 커밋하지 않기)
+.env
+
+# 로컬 데이터베이스
+data/
+*.db
+
+# 에디터와 OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node (React로 전환할 경우 대비)
+node_modules/
+dist/

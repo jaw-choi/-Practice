@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SenseMate MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SenseMate</h1>
+    <span id="status">대기 중</span>
+    <a href="/pointer.html" style="margin-left:auto">포인팅 데모 →</a>
+  </header>
+
+  <main>
+    <!-- 가리키기 모션 담당: js/vision.js -->
+    <section class="card" id="camera-card">
+      <h2>카메라</h2>
+      <div class="video-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <div id="pointer"></div>
+      </div>
+      <button id="camera-btn">카메라 켜기</button>
+      <p id="gesture-label">인식 결과 없음</p>
+    </section>
+
+    <!-- 음성 인식 담당: js/voice.js -->
+    <section class="card" id="voice-card">
+      <h2>음성 비서</h2>
+      <button id="mic-btn">🎤 말하기</button>
+      <form id="text-form">
+        <input id="text-input" placeholder="음성 대신 입력: 할 일 추가 우유 사기" />
+        <button>보내기</button>
+      </form>
+      <div id="chat"></div>
+    </section>
+
+    <!-- 프론트 대시보드 담당: js/dashboard.js -->
+    <section class="card" id="todo-card">
+      <h2>할 일</h2>
+      <ul id="todo-list"></ul>
+      <button id="task-start-btn">작업 시작</button>
+      <div id="recommendations"></div>
+    </section>
+
+    <section class="card" id="stats-card">
+      <h2>시간대별 행동</h2>
+      <div id="hourly-chart"></div>
+    </section>
+
+    <section class="card" id="log-card">
+      <h2>최근 이벤트</h2>
+      <ul id="event-log"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
